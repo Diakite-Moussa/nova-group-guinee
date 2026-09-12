@@ -50,7 +50,11 @@ export default function FloatingWhatsApp() {
 
               <div className="space-y-1.5 pt-1">
                 <a
-                  href="https://wa.me/22400000000?text=Bonjour%20Nova%20Group%20Guin%C3%A9e%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20une%20formation"
+                  href={`https://wa.me/224600000000?text=${encodeURIComponent(
+                    language === "fr"
+                      ? "Bonjour Nova Group Guinée, je souhaite obtenir des informations sur vos formations professionnelles (programmes, dates et tarifs)."
+                      : "Hello Nova Group Guinea, I would like to get information regarding your professional training programs (courses, schedule, and pricing)."
+                  )}`}
                   target="_blank"
                   rel="noreferrer"
                   className="block p-2.5 bg-brand-green/10 hover:bg-brand-green/20 text-brand-green font-bold rounded-xl text-center transition-colors"
@@ -58,7 +62,11 @@ export default function FloatingWhatsApp() {
                   🎓 {language === "fr" ? "S'inscrire à une formation" : "Enroll in a Program"}
                 </a>
                 <a
-                  href="https://wa.me/22400000000?text=Bonjour%20Nova%20Group%20Guin%C3%A9e%2C%20je%20souhaite%20demander%20un%20devis"
+                  href={`https://wa.me/224600000000?text=${encodeURIComponent(
+                    language === "fr"
+                      ? "Bonjour Nova Group Guinée, je souhaite obtenir des informations et demander un devis pour un projet (BTP, Numérique ou Conseil)."
+                      : "Hello Nova Group Guinea, I would like to get information and request a quote for a project (Construction, Digital, or Consulting)."
+                  )}`}
                   target="_blank"
                   rel="noreferrer"
                   className="block p-2.5 bg-navy-900 hover:bg-brand-blue text-white font-bold rounded-xl text-center transition-colors"

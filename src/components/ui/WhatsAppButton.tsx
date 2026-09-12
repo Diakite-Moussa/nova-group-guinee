@@ -42,10 +42,10 @@ export default function WhatsAppButton() {
 
             <div className="flex flex-col gap-2">
               <a
-                href={`https://wa.me/22400000000?text=${encodeURIComponent(
+                href={`https://wa.me/224600000000?text=${encodeURIComponent(
                   language === "fr"
-                    ? "Bonjour Nova Group Guinée, je souhaite des informations sur les formations professionnelles."
-                    : "Hello Nova Group Guinea, I would like information about professional training programs."
+                    ? "Bonjour Nova Group Guinée, je souhaite obtenir des informations sur vos formations professionnelles (programmes, dates et tarifs)."
+                    : "Hello Nova Group Guinea, I would like to get information regarding your professional training programs (courses, schedule, and pricing)."
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -59,10 +59,10 @@ export default function WhatsAppButton() {
               </a>
 
               <a
-                href={`https://wa.me/22400000000?text=${encodeURIComponent(
+                href={`https://wa.me/224600000000?text=${encodeURIComponent(
                   language === "fr"
-                    ? "Bonjour Nova Group Guinée, je souhaite demander un devis pour un projet BTP / Digital."
-                    : "Hello Nova Group Guinea, I would like to request a quote for a BTP / Digital project."
+                    ? "Bonjour Nova Group Guinée, je souhaite obtenir des informations et demander un devis pour un projet (BTP, Numérique ou Conseil)."
+                    : "Hello Nova Group Guinea, I would like to get information and request a quote for a project (Construction, Digital, or Consulting)."
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -76,7 +76,7 @@ export default function WhatsAppButton() {
               </a>
 
               <a
-                href="tel:+22400000000"
+                href="tel:+224600000000"
                 className="flex items-center justify-between px-4 py-2 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition-all"
               >
                 <span className="flex items-center gap-2">

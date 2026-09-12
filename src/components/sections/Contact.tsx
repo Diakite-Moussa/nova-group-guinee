@@ -21,13 +21,13 @@ export default function Contact() {
     {
       icon: Mail,
       label: t.contact.infoEmail,
-      value: "contact@novagroupguinee.com",
+      value: "test@novagroup-int.com",
       subtext: t.contact.infoEmailSub,
     },
     {
       icon: Phone,
       label: t.contact.infoPhone,
-      value: "+224 620 00 00 00",
+      value: "+224 600 00 00 00",
       subtext: t.contact.infoPhoneSub,
     },
     {
@@ -57,8 +57,43 @@ export default function Contact() {
           "Partnership / Other",
         ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [lastMessageUrl, setLastMessageUrl] = useState("");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const name = (data.get("name") as string) || "";
+    const email = (data.get("email") as string) || "";
+    const phone = (data.get("phone") as string) || (language === "fr" ? "Non renseigné" : "Not provided");
+    const company = (data.get("company") as string) || (language === "fr" ? "Non renseignée" : "Not provided");
+    const message = (data.get("message") as string) || "";
+
+    const text =
+      language === "fr"
+        ? `Bonjour Nova Group Guinée, je vous contacte via le formulaire du site web :
+
+👤 Nom complet : ${name}
+📧 Email professionnel : ${email}
+📱 Téléphone / WhatsApp : ${phone}
+🏢 Structure : ${company}
+🎯 Domaine d'intérêt : ${selectedPole}
+
+📝 Détails de mon besoin ou projet :
+${message}`
+        : `Hello Nova Group Guinea, I am contacting you via the website contact form:
+
+👤 Full Name : ${name}
+📧 Professional Email : ${email}
+📱 Phone / WhatsApp : ${phone}
+🏢 Organization : ${company}
+🎯 Area of Interest : ${selectedPole}
+
+📝 Project Details :
+${message}`;
+
+    const whatsappUrl = `https://wa.me/224600000000?text=${encodeURIComponent(text)}`;
+    setLastMessageUrl(whatsappUrl);
+    window.open(whatsappUrl, "_blank");
     setSent(true);
   };
 
@@ -131,8 +166,21 @@ export default function Contact() {
                   {t.contact.successTitle}
                 </h3>
                 <p className="text-sm text-slate-600 max-w-md leading-relaxed">
-                  {t.contact.successDesc}
+                  {language === "fr"
+                    ? "Votre demande a été préparée et la discussion WhatsApp a été ouverte. Si elle ne s'est pas affichée, cliquez sur le bouton ci-dessous :"
+                    : "Your request has been prepared and WhatsApp opened. If it did not appear, click the button below:"}
                 </p>
+                {lastMessageUrl && (
+                  <a
+                    href={lastMessageUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-brand-green hover:bg-brand-green-dark text-white font-bold text-sm shadow-md transition-all hover:scale-102 mt-2"
+                  >
+                    <span>{language === "fr" ? "Ouvrir WhatsApp maintenant" : "Open WhatsApp now"}</span>
+                    <Send size={15} />
+                  </a>
+                )}
                 <button
                   onClick={() => setSent(false)}
                   className="text-xs font-semibold text-brand-blue hover:underline mt-4 cursor-pointer"

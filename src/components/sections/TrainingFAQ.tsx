@@ -122,7 +122,7 @@ export default function TrainingFAQ() {
 
       <div className="mt-8 text-center">
         <a
-          href="https://wa.me/22400000000?text=Bonjour%20Nova%20Group%20Guin%C3%A9e%2C%20j%27ai%20une%20question%20sur%20les%20formations"
+          href="https://wa.me/224600000000?text=Bonjour%20Nova%20Group%20Guin%C3%A9e%2C%20j%27ai%20une%20question%20sur%20les%20formations"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 text-xs font-bold text-brand-green hover:underline"

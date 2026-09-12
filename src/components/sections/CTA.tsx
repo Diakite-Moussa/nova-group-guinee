@@ -60,7 +60,7 @@ export default function CTA() {
               <ArrowRight size={18} />
             </Button>
             <Button
-              href="tel:+22400000000"
+              href="tel:+224600000000"
               variant="outline"
               className="!border-white/20 !text-white hover:!bg-white/10 !py-3.5 !px-8 text-base"
             >

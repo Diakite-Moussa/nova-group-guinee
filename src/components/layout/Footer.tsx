@@ -43,8 +43,8 @@ export default function Footer() {
                     </h4>
                     <ul className="space-y-2 text-sm text-slate-400">
                         <li>Conakry, République de Guinée</li>
-                        <li>contact@novagroupguinee.com</li>
-                        <li>+224 620 00 00 00</li>
+                        <li>test@novagroup-int.com</li>
+                        <li>+224 600 00 00 00</li>
                     </ul>
                 </div>
             </Container>

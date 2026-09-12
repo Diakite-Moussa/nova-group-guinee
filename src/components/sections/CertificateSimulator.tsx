@@ -29,7 +29,7 @@ export default function CertificateSimulator() {
         ? `Bonjour Nova Group Guinée, je souhaite réserver ma place pour obtenir le certificat : "${selectedCourse.title}". Nom : ${studentName}`
         : `Hello Nova Group Guinea, I would like to enroll to obtain the certificate in: "${selectedCourse.title}". Name: ${studentName}`
     );
-    window.open(`https://wa.me/22400000000?text=${message}`, "_blank");
+    window.open(`https://wa.me/224600000000?text=${message}`, "_blank");
   };
 
   return (

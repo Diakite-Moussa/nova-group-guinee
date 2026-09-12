@@ -90,7 +90,7 @@ export default function TrainingCatalogModal({ isOpen, onClose }: TrainingCatalo
         ? "Bonjour Nova Group Guinée, je viens de consulter votre Catalogue Officiel des Formations 2026. Je souhaite m'inscrire."
         : "Hello Nova Group Guinea, I just reviewed your 2026 Official Training Catalog. I would like to enroll."
     );
-    window.open(`https://wa.me/22400000000?text=${text}`, "_blank");
+    window.open(`https://wa.me/224600000000?text=${text}`, "_blank");
   };
 
   if (!isOpen) return null;
@@ -188,10 +188,10 @@ export default function TrainingCatalogModal({ isOpen, onClose }: TrainingCatalo
                     <MapPin size={13} className="text-brand-green" /> Conakry, République de Guinée
                   </p>
                   <p className="flex items-center sm:justify-end gap-1.5 font-medium">
-                    <Mail size={13} className="text-brand-blue" /> contact@novagroupguinee.com
+                    <Mail size={13} className="text-brand-blue" /> test@novagroup-int.com
                   </p>
                   <p className="flex items-center sm:justify-end gap-1.5 font-medium">
-                    <Phone size={13} className="text-amber-500" /> +224 620 00 00 00 / WhatsApp
+                    <Phone size={13} className="text-amber-500" /> +224 600 00 00 00 / WhatsApp
                   </p>
                 </div>
               </div>
@@ -467,8 +467,8 @@ export default function TrainingCatalogModal({ isOpen, onClose }: TrainingCatalo
 
                 <div className="shrink-0 text-left sm:text-right">
                   <p className="text-xs font-bold text-brand-green-light">Nova Group Guinée - Conakry</p>
-                  <p className="text-xs text-slate-400 mt-0.5">WhatsApp : +224 620 00 00 00</p>
-                  <p className="text-xs text-slate-400">Email : contact@novagroupguinee.com</p>
+                  <p className="text-xs text-slate-400 mt-0.5">WhatsApp : +224 600 00 00 00</p>
+                  <p className="text-xs text-slate-400">Email : test@novagroup-int.com</p>
                 </div>
               </div>
             </div>

@@ -79,7 +79,7 @@ export default function Training() {
         : `Hello Nova Group Guinea, I want to enroll in the program: "${enrolledTraining?.title.en}". Name: ${enrollName}, Phone: ${enrollPhone}`
     );
     setTimeout(() => {
-      window.open(`https://wa.me/22400000000?text=${message}`, "_blank");
+      window.open(`https://wa.me/224600000000?text=${message}`, "_blank");
     }, 1200);
   };
 
