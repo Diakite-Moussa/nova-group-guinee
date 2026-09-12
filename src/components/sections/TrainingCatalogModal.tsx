@@ -1,27 +1,20 @@
 import { useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   X,
   Download,
   Printer,
-  FileText,
   CheckCircle2,
   Phone,
   Mail,
   MapPin,
-  Sparkles,
-  Building,
-  GraduationCap,
-  Layers,
-  Clock,
-  Award,
   HardHat,
   Laptop,
   Box,
   Share2,
 } from "lucide-react";
 import logo from "../../assets/logo.jpeg";
-import { TRAININGS, type TrainingItem } from "../../data/trainings";
+import { TRAININGS } from "../../data/trainings";
 import { useLanguage } from "../../context/LanguageContext";
 
 interface TrainingCatalogModalProps {
@@ -31,13 +24,7 @@ interface TrainingCatalogModalProps {
 
 export default function TrainingCatalogModal({ isOpen, onClose }: TrainingCatalogModalProps) {
   const { language } = useLanguage();
-  const [activeCategoryFilter, setActiveCategoryFilter] = useState<"all" | "btp" | "tech" | "bim">("all");
   const printableRef = useRef<HTMLDivElement>(null);
-
-  const filteredItems =
-    activeCategoryFilter === "all"
-      ? TRAININGS
-      : TRAININGS.filter((t) => t.category === activeCategoryFilter);
 
   const btpTrainings = TRAININGS.filter((t) => t.category === "btp");
   const techTrainings = TRAININGS.filter((t) => t.category === "tech");

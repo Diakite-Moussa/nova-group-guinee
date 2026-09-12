@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Monitor, Compass, HardHat, Award, CheckCircle2, ShieldCheck, Sparkles, ChevronRight } from "lucide-react";
-import Container from "../ui/Container";
 import { useLanguage } from "../../context/LanguageContext";
 
 export default function TrainingLabShowcase() {

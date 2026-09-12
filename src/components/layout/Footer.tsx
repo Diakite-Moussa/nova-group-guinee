@@ -13,7 +13,7 @@ export default function Footer() {
                         <img
                             src={logo}
                             alt="Nova Group Guinée"
-                            className="h-12 w-12 rounded-xl bg-white p-1 shadow-md object-contain"
+                            className="h-16 w-16 sm:h-20 sm:w-20 rounded-2xl bg-white p-1.5 shadow-lg object-contain"
                         />
                         <h3 className="font-display text-2xl font-extrabold">
                             NOVA GROUP <span className="text-brand-green">GUINÉE</span>

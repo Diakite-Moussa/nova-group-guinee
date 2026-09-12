@@ -15,7 +15,6 @@ import {
   Building,
   Search,
   Award,
-  Users,
   Target,
   Rocket,
   Compass,
@@ -32,24 +31,8 @@ import {
 } from "../../data/trainings";
 import { useLanguage } from "../../context/LanguageContext";
 import TrainingLabShowcase from "./TrainingLabShowcase";
-import CertificateSimulator from "./CertificateSimulator";
 import TrainingFAQ from "./TrainingFAQ";
 import TrainingCatalogModal from "./TrainingCatalogModal";
-
-const SOFTWARE_STACK = [
-  { name: "Autodesk Revit", category: "BIM", icon: "📐" },
-  { name: "AutoCAD 3D", category: "CAO", icon: "🏗️" },
-  { name: "Civil 3D & VRD", category: "Infra", icon: "🛣️" },
-  { name: "Robot Structural", category: "Calcul", icon: "🏢" },
-  { name: "Primavera P6", category: "Planning", icon: "📊" },
-  { name: "MS Project", category: "Gestion", icon: "📅" },
-  { name: "React & TypeScript", category: "Web", icon: "💻" },
-  { name: "Python & IA", category: "Data", icon: "🤖" },
-  { name: "Cisco & Réseaux", category: "Cyber", icon: "🔒" },
-  { name: "Power BI", category: "Analytics", icon: "📈" },
-  { name: "GPS Topo RTK", category: "Terrain", icon: "📍" },
-  { name: "Linux Debian", category: "Système", icon: "🐧" },
-];
 
 export default function Training() {
   const { language, t } = useLanguage();
@@ -327,27 +310,6 @@ export default function Training() {
           </motion.div>
         </div>
 
-        {/* Software & Tool Tech Stack Floating Chips */}
-        <div className="mb-10 overflow-x-auto pb-2 scrollbar-none">
-          <div className="flex items-center gap-2.5 min-w-max justify-center md:flex-wrap">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-400 mr-2 flex items-center gap-1.5">
-              <Sparkles size={13} className="text-brand-green" />
-              {language === "fr" ? "Logiciels & Outils Maîtrisés :" : "Mastered Tools & Tech :"}
-            </span>
-            {SOFTWARE_STACK.map((st) => (
-              <button
-                key={st.name}
-                onClick={() => setSearchQuery(st.name.split(" ")[0])}
-                className="px-3 py-1 rounded-full text-xs font-medium bg-white text-slate-700 border border-slate-200 hover:border-brand-blue hover:bg-brand-blue/5 transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
-              >
-                <span>{st.icon}</span>
-                <span>{st.name}</span>
-                <span className="text-[10px] text-slate-400 font-normal">({st.category})</span>
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Search Bar & Category Filters */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-12 bg-white/70 backdrop-blur-md p-3.5 rounded-3xl border border-slate-200/90 shadow-sm">
           {/* Category Tabs */}
@@ -614,9 +576,6 @@ export default function Training() {
 
         {/* Technical Facilities & High Performance Labs Showcase */}
         <TrainingLabShowcase />
-
-        {/* Interactive Competency Certificate Simulator */}
-        <CertificateSimulator />
 
         {/* Frequently Asked Questions Accordion */}
         <TrainingFAQ />

@@ -7,7 +7,7 @@ import {
     useScroll,
 } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { ArrowRight, Sparkles, HardHat, Laptop, CheckCircle, ExternalLink, Activity } from "lucide-react";
+import { ArrowRight, Sparkles, HardHat, Laptop, ExternalLink, Activity } from "lucide-react";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import HeroHybrid3D from "../three/HeroHybrid3D";

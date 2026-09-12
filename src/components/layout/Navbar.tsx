@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import logo from "../../assets/logo.jpeg";
@@ -33,8 +33,8 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/90 backdrop-blur-md shadow-sm py-2"
+          : "bg-transparent py-3 sm:py-4"
       }`}
     >
       <Container className="flex items-center justify-between">
@@ -42,7 +42,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Nova Group Guinée"
-            className="h-12 w-12 sm:h-13 sm:w-13 md:h-14 md:w-14 rounded-xl bg-white p-1 shadow-md object-contain transition-transform group-hover:scale-105"
+            className="h-16 w-16 sm:h-20 sm:w-20 md:h-[84px] md:w-[84px] rounded-2xl bg-white p-1.5 shadow-lg object-contain transition-transform group-hover:scale-105"
           />
           <span
             className={`font-display text-xl sm:text-2xl font-black tracking-tight hidden sm:inline transition-colors ${

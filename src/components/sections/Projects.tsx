@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, MapPin, Calendar, Building, Sparkles, X, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, MapPin, Calendar, Sparkles, X } from "lucide-react";
 import Container from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
 import Button from "../ui/Button";

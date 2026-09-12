@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Award, Sparkles, CheckCircle2, QrCode, Download, Send, ShieldCheck, GraduationCap } from "lucide-react";
+import { Award, Sparkles, QrCode, ShieldCheck, GraduationCap } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
 
 const COURSES_OPTIONS = [
